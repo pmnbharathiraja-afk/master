@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Casino Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a0033, #660066, #ff00ff, #cc00cc);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            overflow-x: hidden;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .header {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            z-index: 1;
+            filter: brightness(1.1) contrast(1.2);
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+        }
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ffd700, 0 0 40px #ff4500;
+            animation: glow 2s ease-in-out infinite alternate;
+            margin-bottom: 20px;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ffd700, 0 0 40px #ff4500; }
+            to { text-shadow: 0 0 30px #ffd700, 0 0 60px #ff1493; }
+        }
+        .cta {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff4500, #ffd700);
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #1a0033;
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.5);
+            transition: all 0.3s;
+        }
+        .cta:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.7);
+        }
+        .games {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            gap: 30px;
+        }
+        .game-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            width: 250px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .game-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.5);
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .logo { font-size: 2.5rem; }
+            .games { flex-direction: column; align-items: center; }
+            .header { height: 60vh; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/fd88e408a50ad409bee5e6883b21b576d59af100.jpg" alt="Attractive woman on roulette table" class="hero-image">
+        <div class="header-content">
+            <h1 class="logo">Lucky Vegas Casino</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">Experience the Thrill of Real Wins!</p>
+            <a href="#" class="cta">Play Now & Get Bonus</a>
+        </div>
+    </header>
+    
+    <section class="games">
+        <div class="game-card">
+            <div class="game-icon">🎰</div>
+            <h2 class="game-title">Slots</h2>
+            <p>Spin to Win Big Jackpots!</p>
+        </div>
+        <div class="game-card">
+            <div class="game-icon">♠️</div>
+            <h2 class="game-title">Blackjack</h2>
+            <p>Beat the Dealer Today!</p>
+        </div>
+        <div class="game-card">
+            <div class="game-icon">♦️</div>
+            <h2 class="game-title">Poker</h2>
+            <p>Bluff Your Way to Victory!</p>
+        </div>
+        <div class="game-card">
+            <div class="game-icon">🎲</div>
+            <h2 class="game-title">Roulette</h2>
+            <p>Place Your Bets Now!</p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2026 Lucky Vegas Casino. All rights reserved. 18+ Only.</p>
+    </footer>
+</body>
+</html>
